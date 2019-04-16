@@ -10,19 +10,15 @@ The docker image depends on 4 important elements:
 4. spark-defaults.conf
 
 The docker-compose.yml file has 2 services which both depend on the spark image:
-1. pyspark
-2. history
 
-#### pyspark service
-The pyspark service exports port :4040 in order to visualize the job progress.
-It uses 3 volumes:
-1. app
-2. data
-3. spark-events
+1. **pyspark service** exports port :4040 in order to visualize the job progress.
+    It uses 3 volumes:
+    1. app
+    2. data
+    3. spark-events
 
-#### history service
-The history service exports port :18080 in order to visualize finished jobs.
-It shares spark-events volume with the pyspark service.
+2. **history service** exports port :18080 in order to visualize finished jobs.
+    It shares spark-events volume with the pyspark service.
 
 ### Usage
 
